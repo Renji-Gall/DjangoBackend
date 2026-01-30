@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "pymysql": "^1.0.0"
+    "pymysql": "^1.0.0",
+    "whitenoise": "^0.0.1"
   }
 }

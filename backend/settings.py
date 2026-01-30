@@ -145,7 +145,7 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = [
-    # "http://localhost:3000",
+    "http://localhost:3000",
     "https://task-list.rengall.dev",
-    "https://d3t9bqr0c2iltt.cloudfront.net/"
+    "https://d3t9bqr0c2iltt.cloudfront.net"
 ]
