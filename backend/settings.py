@@ -29,10 +29,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-!so6&a8%njfvysj_7w71pyzyzlracfk%#vj2jb8dw=i)t5x4-h'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ["task-api.rengall.dev"]
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 # Application definition
 
@@ -46,10 +46,12 @@ INSTALLED_APPS = [
     'tasks.apps.TasksConfig',
     'rest_framework',
     'corsheaders',
+    'whitenoise.runserver_nostatic',
 ]
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -143,5 +145,7 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000"
+    # "http://localhost:3000",
+    "https://task-list.rengall.dev",
+    "https://d3t9bqr0c2iltt.cloudfront.net/"
 ]
