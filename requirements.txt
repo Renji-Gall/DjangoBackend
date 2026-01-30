@@ -9,3 +9,4 @@ PyMySQL==1.1.1 #Python MySQL library (required for connecting Django to MySQL, i
 #These are required for deployment to EC2, but not for local development
 gunicorn==20.1.0 #Python WSGI HTTP Server for UNIX
 whitenoise==6.2.0 #Will solve "MIME type" error when hosted CSS is loaded
+
