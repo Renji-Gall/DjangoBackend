@@ -31,7 +31,11 @@ SECRET_KEY = 'django-insecure-!so6&a8%njfvysj_7w71pyzyzlracfk%#vj2jb8dw=i)t5x4-h
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["task-api.rengall.dev"]
+ALLOWED_HOSTS = [
+    "task-api.rengall.dev",
+    "localhost",
+    "127.0.0.1"
+    ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 # Application definition
@@ -147,5 +151,30 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "https://task-list.rengall.dev",
-    "https://d3t9bqr0c2iltt.cloudfront.net"
+    "https://d3t9bqr0c2iltt.cloudfront.net",
+    "https://rengall.dev",
+    "https://www.rengall.dev",
+]
+
+CORS_ALLOWED_HEADERS = [
+    "authorization",
+    "content-type",
+    "x-csrftoken",
+    "x-requested-with",
+]
+
+CORS_ALLOW_METHODS = [
+    "GET",
+    "POST",
+    "PUT",
+    "PATCH",
+    "DELETE",
+    "OPTIONS",
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://rengall.dev",
+    "https://www.rengall.dev",
+    "https://task-api.rengall.dev",
+    "http://localhost:3000",
 ]
