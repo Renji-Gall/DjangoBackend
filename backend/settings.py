@@ -34,7 +34,8 @@ DEBUG = False
 ALLOWED_HOSTS = [
     "task-api.rengall.dev",
     "localhost",
-    "127.0.0.1"
+    "127.0.0.1",
+    "rengall.dev"
     ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
@@ -154,6 +155,8 @@ CORS_ALLOWED_ORIGINS = [
     "https://d3t9bqr0c2iltt.cloudfront.net",
     "https://rengall.dev",
     "https://www.rengall.dev",
+    "https://tasks-api.rengall.dev/api/tasks",
+    "https://tasks-api.rengall.dev/api"
 ]
 
 CORS_ALLOWED_HEADERS = [
@@ -178,3 +181,4 @@ CSRF_TRUSTED_ORIGINS = [
     "https://task-api.rengall.dev",
     "http://localhost:3000",
 ]
+
