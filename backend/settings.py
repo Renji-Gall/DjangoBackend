@@ -34,7 +34,6 @@ DEBUG = False
 ALLOWED_HOSTS = [
     "task-api.rengall.dev",
     "localhost",
-    "127.0.0.1",
     "rengall.dev"
     ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
